@@ -19,5 +19,8 @@ Route::get('/', function () {
 
 
 Route::get('/HelloLaravel', function () {
-    return 2 + "2";
+    $nev = "Bence";
+    return view("hello", [
+        'name' => $nev
+    ]);
 });
