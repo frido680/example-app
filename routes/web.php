@@ -18,6 +18,6 @@ Route::get('/', function () {
 });
 
 
-Route::get('/asd', function () {
+Route::get('/HelloLaravel', function () {
     return 2 + "2";
 });
