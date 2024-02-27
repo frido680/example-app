@@ -8,8 +8,12 @@
 </head>
 
 <body>
-    <h1>Hello Laravel</h1>
-    <h2>{{$name}}</h2>
+    <ul>
+        @foreach($arr as $elem)
+        <li>{{ $elem }}</li>
+        @endforeach
+    </ul>
+
 </body>
 
 </html>

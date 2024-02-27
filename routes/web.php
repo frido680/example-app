@@ -24,3 +24,18 @@ Route::get('/HelloLaravel', function () {
         'name' => $nev
     ]);
 });
+
+Route::get('/ArrayWriteOut', function () {
+    $tomb = ["Lajos", "Béla", "Tibi"];
+    return view("ArrayView", [
+        "arr"=>$tomb
+    ]);
+});
+
+
+Route::get('/post/{cim}', function ($cim) {
+    $tomb = ["Lajos", "Béla", "Tibi"];
+    return view("post", [
+        "title"=>$tomb[$cim] ?? abort(404)
+    ]);
+});
